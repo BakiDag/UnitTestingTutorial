@@ -9,11 +9,11 @@ namespace BankXUnitTests
         [Fact]
         public void Adding_Funds_Updates_Balance() {
 
-            //Arrange
-            BankAccount account = new BankAccount(1000);
-
-            //Act
-            account.Add(100);
+			//Arrange
+			BankAccount account = new BankAccount(1000);
+						
+			//Act
+			account.Add(100);
 
             //Assert
             Assert.Equal(1100, account.Balance);

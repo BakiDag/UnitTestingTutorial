@@ -21,7 +21,7 @@ namespace Bank
         public double Balance {
 
 			//get { return balance; } //1 Warning
-			get => balance;
+			get => balance; 
 		}
 
 		public void Add(double amount) {
