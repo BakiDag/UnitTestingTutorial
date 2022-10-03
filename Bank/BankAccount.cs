@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Bank
 {
@@ -18,12 +18,13 @@ namespace Bank
             this.balance = balance;
         }
 
-        public double Balance
-        {
-            get { return balance; }
-        }
+        public double Balance {
 
-        public void Add(double amount)
+			//get { return balance; } //1 Warning
+			get => balance;
+		}
+
+		public void Add(double amount)
         {
             if (amount < 0)
             {
