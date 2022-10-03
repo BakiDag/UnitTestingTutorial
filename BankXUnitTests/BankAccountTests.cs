@@ -43,16 +43,23 @@ namespace BankXUnitTests
         }
 
         [Fact]
-        public void Withdrawing_Negative_Funds_Updates_Balance()
+        public void Withdrawing_Negative_Funds_Throws()
         {
             //Arrange
             BankAccount account = new BankAccount(1000);
 
-            //Act
-            account.Withdraw(100);
+            //Act + Assert             
+            Assert.Throws<ArgumentOutOfRangeException>(() => account.Withdraw(-100));
+        }
 
-            //Assert
-            Assert.Equal(900, account.Balance);
+        [Fact]
+        public void Withdrawing_More_Than_Funds_Throws()
+        {
+            //Arrange
+            BankAccount account = new BankAccount(1000);
+
+            //Act + Assert             
+            Assert.Throws<ArgumentOutOfRangeException>(() => account.Withdraw(2000));
         }
 
         [Fact]
@@ -68,6 +75,16 @@ namespace BankXUnitTests
             //Assert
             Assert.Equal(500, account.Balance);
             Assert.Equal(500, otherAccount.Balance);
+        }
+
+        [Fact]
+        public void TransferFundsTo_Non_Existing_Account_Throws()
+        {
+            //Arrange
+            BankAccount account = new BankAccount(1000);
+
+            //Act + Assert             
+            Assert.Throws<ArgumentNullException>(() => account.TransferFundsTo(null, 2000));
         }
     }
 }
