@@ -9,12 +9,12 @@ namespace Bank
     {
         private double balance;
 
-        public BankAccount()
-        {
+        public BankAccount() {
+
         }
 
-        public BankAccount(double balance)
-        {
+        public BankAccount(double balance){
+
             this.balance = balance;
         }
 
@@ -24,8 +24,8 @@ namespace Bank
 			get => balance;
 		}
 
-		public void Add(double amount)
-        {
+		public void Add(double amount) {
+
             if (amount < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(amount));
@@ -35,8 +35,8 @@ namespace Bank
         }
 
         //abheben
-        public void Withdraw(double amount)
-        {
+        public void Withdraw(double amount) {
+
             if (amount > balance)
             {
                 throw new ArgumentOutOfRangeException(nameof(amount));
@@ -51,8 +51,8 @@ namespace Bank
         }
 
         //transfer from current acc to any other acc
-        public void TransferFundsTo(BankAccount otherAccount, double amount)
-        {
+        public void TransferFundsTo(BankAccount otherAccount, double amount) {
+
             if (otherAccount is null)
             {
                 throw new ArgumentNullException(nameof(otherAccount));

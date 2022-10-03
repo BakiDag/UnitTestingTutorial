@@ -7,8 +7,8 @@ namespace BankXUnitTests
     public class BankAccountTests
     {
         [Fact]
-        public void Adding_Funds_Updates_Balance()
-        {
+        public void Adding_Funds_Updates_Balance() {
+
             //Arrange
             BankAccount account = new BankAccount(1000);
 
@@ -20,8 +20,8 @@ namespace BankXUnitTests
         }
 
         [Fact]
-        public void Adding_Negative_Funds_Throws()
-        {
+        public void Adding_Negative_Funds_Throws() {
+
             //Arrange
             BankAccount account = new BankAccount(1000);
 
@@ -30,8 +30,8 @@ namespace BankXUnitTests
         }
 
         [Fact]
-        public void Withdrawing_Funds_Updates_Balance()
-        {
+        public void Withdrawing_Funds_Updates_Balance() {
+
             //Arrange
             BankAccount account = new BankAccount(1000);
 
@@ -43,8 +43,8 @@ namespace BankXUnitTests
         }
 
         [Fact]
-        public void Withdrawing_Negative_Funds_Throws()
-        {
+        public void Withdrawing_Negative_Funds_Throws() {
+
             //Arrange
             BankAccount account = new BankAccount(1000);
 
@@ -53,8 +53,8 @@ namespace BankXUnitTests
         }
 
         [Fact]
-        public void Withdrawing_More_Than_Funds_Throws()
-        {
+        public void Withdrawing_More_Than_Funds_Throws() {
+
             //Arrange
             BankAccount account = new BankAccount(1000);
 
@@ -63,8 +63,8 @@ namespace BankXUnitTests
         }
 
         [Fact]
-        public void Transfering_Funds_Updates_Both_Accounts()
-        {
+        public void Transfering_Funds_Updates_Both_Accounts() {
+
             //Arrange
             BankAccount account = new BankAccount(1000);
             BankAccount otherAccount = new BankAccount();
@@ -78,8 +78,8 @@ namespace BankXUnitTests
         }
 
         [Fact]
-        public void TransferFundsTo_Non_Existing_Account_Throws()
-        {
+        public void TransferFundsTo_Non_Existing_Account_Throws() {
+
             //Arrange
             BankAccount account = new BankAccount(1000);
 
